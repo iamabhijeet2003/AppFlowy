@@ -286,7 +286,15 @@
     "removeSuccess": "Удалено успешно",
     "favoriteSpace": "Избранное",
     "RecentSpace": "Недавнее",
-    "Spaces": "Пространства"
+    "Spaces": "Пространства",
+    "upgradeToPro": "Перейти на Pro Plan",
+    "upgradeToAIMax": "Разблокируйте неограниченный ИИ",
+    "storageLimitDialogTitle": "У вас заканчивается место для хранения. Обновитесь до Pro Plan, чтобы получить больше места для хранения",
+    "aiResponseLitmitDialogTitle": "У вас заканчиваются ответы ИИ. Обновитесь до Pro Plan или AI Max, чтобы получить больше ответов ИИ",
+    "aiResponseLitmit": "У вас заканчиваются ответы ИИ. Перейдите в Настройки -> План -> Нажмите AI Max или Pro Plan, чтобы получить больше ответов ИИ",
+    "purchaseStorageSpace": "Купить место для хранения",
+    "purchaseAIResponse": "Покупка ",
+    "upgradeToAILocal": "ИИ офлайн на вашем устройстве"
   },
   "notifications": {
     "export": {
@@ -331,6 +339,7 @@
     "helpCenter": "Центр помощи",
     "add": "Добавить",
     "yes": "Да",
+    "no": "Нет",
     "clear": "Очистить",
     "remove": "Удалить",
     "dontRemove": "Не удалять",
@@ -411,6 +420,14 @@
           "light": "Светлая",
           "dark": "Темная"
         }
+      },
+      "resetCursorColor": {
+        "title": "Сбросить цвет курсора документа",
+        "description": "Вы уверены, что хотите сбросить цвет курсора?"
+      },
+      "resetSelectionColor": {
+        "title": "Сбросить цвет выбора документа",
+        "description": "Вы уверены, что хотите сбросить цвет выделения?"
       },
       "theme": {
         "title": "Тема",
@@ -632,6 +649,20 @@
         "aiSettingsDescription": "Выберите или настройте модели ИИ, используемые в @:appName. Для достижения наилучшей производительности мы рекомендуем использовать параметры модели по умолчанию.",
         "loginToEnableAIFeature": "Функции ИИ активируются только после входа в систему с помощью @:appName Cloud. Если у Вас нет аккаунта @:appName, перейдите в раздел «Мой аккаунт», чтобы зарегистрироваться.",
         "llmModel": "Языковая модель",
+        "llmModelType": "Тип языковой модели",
+        "downloadLLMPrompt": "Скачать {}",
+        "downloadLLMPromptDetail": "Скачивание {} локальной модели займет до {} хранилища. Хотите продолжить?",
+        "downloadAIModelButton": "Скачать модель ИИ",
+        "downloadingModel": "Скачивание",
+        "localAILoaded": "Локальная модель ИИ успешно добавлена и готова к использованию",
+        "localAIStart": "Локальный чат ИИ запускается...",
+        "localAILoading": "Локальная модель чата ИИ загружается...",
+        "localAIStopped": "Локальный ИИ остановлен",
+        "failToLoadLocalAI": "Не удалось запустить локальный ИИ",
+        "restartLocalAI": "Перезапустить локальный ИИ",
+        "disableLocalAIDialog": "Хотите отключить локальный ИИ?",
+        "localAIToggleTitle": "Включить или отключить локальный ИИ",
+        "fetchLocalModel": "Получить локальную конфигурацию модели",
         "title": "Ключи API ИИ",
         "openAILabel": "Ключ API OpenAI",
         "openAITooltip": "Вы можете найти свой секретный ключ API на странице ключа API.",
@@ -648,12 +679,18 @@
         "title": "Сводка использования плана",
         "storageLabel": "Хранилище",
         "storageUsage": "{} из {} ГБ",
+        "unlimitedStorageLabel": "Неограниченное хранилище",
         "collaboratorsLabel": "Сотрудники",
         "collaboratorsUsage": "{} из {}",
         "aiResponseLabel": "Ответы ИИ",
         "aiResponseUsage": "{} из {}",
+        "unlimitedAILabel": "Неограниченное количество ответов",
         "proBadge": "Pro",
+        "aiMaxBadge": "AI Max",
+        "aiOnDeviceBadge": "ИИ на устройстве",
         "memberProToggle": "Неогр. кол-во участников",
+        "aiMaxToggle": "Неограниченные ответы ИИ",
+        "aiOnDeviceToggle": "ИИ на устройстве для максимальной конфиденциальности",
         "aiCredit": {
           "title": "Добавить кредитов @:appName AI",
           "price": "{}",
@@ -690,6 +727,25 @@
           "professionalConTwo": "Неогр. кол-во ответов ИИ",
           "professionalConThree": "История изменений за 1 год"
         },
+        "addons": {
+          "title": "Дополнения",
+          "addLabel": "Добавить",
+          "activeLabel": "Добавлен",
+          "aiMax": {
+            "title": "AI Max",
+            "description": "Разблокируйте неограниченный ИИ",
+            "price": "{}",
+            "priceInfo": "/пользователь в месяц",
+            "billingInfo": "ежегодная или {} помесячная оплата"
+          },
+          "aiOnDevice": {
+            "title": "ИИ на устройстве",
+            "description": "ИИ офлайн на вашем устройстве",
+            "price": "{}",
+            "priceInfo": "/пользователь в месяц",
+            "billingInfo": "ежегодная или {} помесячная оплата"
+          }
+        },
         "deal": {
           "bannerLabel": "Новогодняя акция!",
           "title": "Развивайте свою команду!",
@@ -715,7 +771,36 @@
         "title": "Детали оплаты",
         "methodLabel": "Способ оплаты",
         "methodButtonLabel": "Изменить способ"
-      }
+      },
+      "addons": {
+        "title": "Дополнения",
+        "addLabel": "Добавить",
+        "removeLabel": "Удалить",
+        "renewLabel": "Пересоздать",
+        "aiMax": {
+          "label": "AI Max",
+          "description": "Разблокируйте неограниченный ИИ и продвинутые модели",
+          "activeDescription": "Следующий счет должен быть оплачен {}",
+          "canceledDescription": "AI Max будет доступен до {}"
+        },
+        "aiOnDevice": {
+          "label": "ИИ на устройстве",
+          "description": "Разблокируйте неограниченный ИИ офлайн на вашем устройстве",
+          "activeDescription": "Следующий счет должен быть оплачен {}",
+          "canceledDescription": "AI на устройстве будет доступен до {}"
+        },
+        "removeDialog": {
+          "title": "Удалить {}",
+          "description": "Вы уверены, что хотите удалить {plan}? Вы немедленно потеряете доступ к функциям и преимуществам {plan}."
+        }
+      },
+      "currentPeriodBadge": "ТЕКУЩИЙ",
+      "changePeriod": "Изменить период",
+      "planPeriod": "{} период",
+      "monthlyInterval": "Ежемесячно",
+      "monthlyPriceInfo": "за место с ежемесячной оплатой",
+      "annualInterval": "Ежегодно",
+      "annualPriceInfo": "за место с ежегодной оплатой"
     },
     "comparePlanDialog": {
       "title": "Сравнить и выбрать план",
@@ -746,7 +831,9 @@
         "itemFour": "Гостевые сотрудники",
         "itemFive": "Хранилище",
         "itemSix": "Сотрудничество в реальном времени",
+        "tooltipSix": "Пожизненно означает, что количество ответов никогда не сбрасывается",
         "itemSeven": "Мобильное приложение",
+        "tooltipSeven": "Позволяет вам настраивать часть URL-адреса для вашего рабочего пространства.",
         "tooltipThree": "Гости имеют разрешение только на чтение опубликованного контента.",
         "tooltipFour": "Гостевые сотрудники оплачиваются как одно рабочее место.",
         "itemEight": "Ответы ИИ",
@@ -755,6 +842,7 @@
       "freeLabels": {
         "itemOne": "снимается за рабочее пространство",
         "itemTwo": "3",
+        "itemThree": "5 ГБ",
         "itemFour": "0",
         "itemFive": "5 ГБ",
         "itemSix": "да",
@@ -764,6 +852,7 @@
       "proLabels": {
         "itemOne": "оплата за рабочее пространство",
         "itemTwo": "до 10",
+        "itemThree": "неограниченный",
         "itemFour": "10 гостей оплачиваются как одно место",
         "itemFive": "неограничено",
         "itemSix": "да",
@@ -944,6 +1033,9 @@
           "other": "{} участников"
         },
         "memberLimitExceeded": "Вы достигли максимального количества участников, разрешенного для вашей учетной записи. Если Вы хотите добавить дополнительных участников для продолжения вашей работы, отправьте запрос на Github.",
+        "memberLimitExceededUpgrade": "улучшить",
+        "memberLimitExceededPro": "Достигнут лимит участников. Если вам нужно больше участников, свяжитесь с нами",
+        "memberLimitExceededProContact": "support@appflowy.io",
         "failedToAddMember": "Не удалось добавить участника.",
         "addMemberSuccess": "Участник успешно добавлен.",
         "removeMember": "Удалить участника",
@@ -2088,7 +2180,17 @@
     "noAccessToVisit": "Нет доступа к этой странице...",
     "createWithAppFlowy": "Создать веб-сайт с AppFlowy",
     "fastWithAI": "Быстро и легко с ИИ.",
-    "tryItNow": "Попробуй сейчас"
+    "tryItNow": "Попробуй сейчас",
+    "onlyGridViewCanBePublished": "Можно опубликовать только вид сетки",
+    "database": {
+      "zero": "Опубликовать {} выбранное представление",
+      "one": "Опубликовать {} выбранных представлений",
+      "many": "Опубликовать {} выбранных представлений",
+      "other": "Опубликовать {} выбранных представлений"
+    },
+    "mustSelectPrimaryDatabase": "Необходимо выбрать основное представление",
+    "noDatabaseSelected": "База данных не выбрана, выберите хотя бы одну базу данных.",
+    "unableToDeselectPrimaryDatabase": "Невозможно отменить выбор основной базы данных"
   },
   "web": {
     "continue": "Продолжить",
